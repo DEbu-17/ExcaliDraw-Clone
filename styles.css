@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+.drawer {
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  background-color: #ececf4;
+}
+.drawer:hover {
+  background-color: #e0dfff;
+}
+.library {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 90px;
+  border-radius: 10px;
+  gap: 5px;
+  background-color: #ececf4;
+  font-size: 14px;
+}
+.library:hover {
+  background-color: #e0dfff;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0px 10px;
+  position:fixed;
+  width: 98%;
+}
+.icons-container {
+  display: flex;
+  gap: 7px;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+  width: 550px;
+  box-shadow: 0px 0px 3px lightgray;
+}
+.profile {
+  display: flex;
+  gap: 10px;
+  color: grey;
+}
+.user-profile {
+  background-color: #6965db;
+  color: white;
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.percentage {
+  height: 35px;
+  width: 139px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 17px;
+  left: 18px;
+  background-color: #ececf4;
+}
+.hundered-percent {
+  padding-inline: 10px;
+  display: flex;
+  align-items: center;
+}
+.two-arrow {
+  height: 35px;
+  width: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 17px;
+  left: 180px;
+  background-color: #ececf4;
+}
+.left-arrow {
+  padding-right: 12px;
+}
+.sheild {
+  position: fixed;
+  bottom: 25px;
+  right: 73px;
+  color: #6965db;
+}
+.ques-mark {
+  height: 35px;
+  width: 35px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 17px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+button:hover {
+  background-color: #e0dfff;
+}
+.icons {
+  color: grey;
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar{
+  display: none;
+}
