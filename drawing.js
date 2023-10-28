@@ -49,7 +49,7 @@ function drawFreeHand(currentPosition) {
   ctx.lineTo(currentPosition.x, currentPosition.y);
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
-  ctx.lineWidth = 2;
+  
   ctx.stroke();
   ctx.closePath();
   previousPosition = currentPosition;
@@ -95,6 +95,5 @@ function drawLine(currentPosition) {
   ctx.beginPath();
   ctx.moveTo(previousPosition.x, previousPosition.y);
   ctx.lineTo(currentPosition.x, currentPosition.y);
-  ctx.lineWidth = 2;
   ctx.stroke();
 }
