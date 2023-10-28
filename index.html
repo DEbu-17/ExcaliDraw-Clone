@@ -17,24 +17,23 @@
   </head>
   <body>
     <section id="header">
-      <div class="drawer"><i class="fa-solid fa-bars"></i></div>
+      <div class="drawer" onclick="drawerOnClick()"><i class="fa-solid fa-bars"></i></div>
       <div class="icons-container">
-        <button class="icons" style="margin-left: 10px;"><i class="fa-solid fa-unlock-keyhole"></i></button>
+        <button class="icons" id="lock" onclick="iconButtonClicked(this)" style="margin-left: 10px;"><i class="fa-solid fa-unlock-keyhole"></i></button>
         <p style="width: 0px ;height: 20px; margin: auto; border: 1px solid lightgrey;"></p>
-        <button class="icons"><i class="fa-regular fa-hand"></i></button>
-        <button class="icons"><i class="fa-solid fa-arrow-pointer"> <sub>1</sub></i></button>
-        <button class="icons"><i class="fa-regular fa-square"></i> <sub>2</sub></button>
-        <button class="icons"><i class="fa-solid fa-diamond"></i> <sub>3</sub></button>
-        <button class="icons"><i class="fa-regular fa-circle"></i> <sub>4</sub></button>
-        <button class="icons"><i class="fa-solid fa-arrow-right"></i> <sub>5</sub></button>
-        <button class="icons"><i class="fa-solid fa-minus"></i> <sub>6</sub></button>
-        <button class="icons"  id="pencil"><i class="fa-solid fa-pencil"></i> <sub>7</sub></button>
-        <button style="display: none;" id="selectColor"><input type="color" style="border: none;" id="colorPicker"></button>
-        <button class="icons"><i class="fa-solid fa-a"></i> <sub>8</sub></button>
-        <button class="icons"><i class="fa-solid fa-image"></i> <sub>9</sub></button>
-        <button class="icons"><i class="fa-solid fa-eraser"></i> <sub>0</sub></button>
+        <button class="icons" id="hand" onclick="iconButtonClicked(this)"> <i class="fa-regular fa-hand"></i></button>
+        <button class="icons" id="fa-arrow-pointer"onclick="iconButtonClicked(this)"><i class="fa-solid fa-arrow-pointer"> <sub>1</sub></i></button>
+        <button class="icons" id="rectangle"onclick="iconButtonClicked(this)"><i class="fa-regular fa-square"></i> <sub>2</sub></button>
+        <button class="icons" id="diamond"onclick="iconButtonClicked(this)"><i class="fa-solid fa-diamond"></i> <sub>3</sub></button>
+        <button class="icons" id="circle"onclick="iconButtonClicked(this)"><i class="fa-regular fa-circle"></i> <sub>4</sub></button>
+        <button class="icons" id="right-arrow"onclick="iconButtonClicked(this)"><i class="fa-solid fa-arrow-right"></i> <sub>5</sub></button>
+        <button class="icons" id="line"onclick="iconButtonClicked(this)"><i class="fa-solid fa-minus"></i> <sub>6</sub></button>
+        <button class="icons" id="pencil"onclick="iconButtonClicked(this)"><i class="fa-solid fa-pencil"></i> <sub>7</sub></button>
+        <button class="icons" id="capitalA"onclick="iconButtonClicked(this)"><i class="fa-solid fa-a"></i> <sub>8</sub></button>
+        <button class="icons" id="gallery"onclick="iconButtonClicked(this)"><i class="fa-solid fa-image"></i> <sub>9</sub></button>
+        <button class="icons" id="eraser"onclick="iconButtonClicked(this)"><i class="fa-solid fa-eraser"></i> <sub>0</sub></button>
         <p style="width: 0px ;height: 20px; margin: auto; border: 1px solid lightgrey;"></p>
-        <button class="icons" style="margin-right: 10px;"><i class="fa-solid fa-screwdriver-wrench"></i></button>
+        <button class="icons" id="tools"onclick="iconButtonClicked(this)" style="margin-right: 10px;"><i class="fa-solid fa-screwdriver-wrench"></i></button>
       </div>
       <div class="profile">
         <div class=" user-profile"><i class="fa-regular fa-user"></i></div>
@@ -48,15 +47,22 @@
       <span><i class="fa-solid fa-plus"></i></span>
     </div>
     <div class="two-arrow">
-      <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
-      <span><i class="fa-solid fa-arrow-right"></i></span>
+      <span class="left-arrow" id="undo"><i class="fa-solid fa-arrow-left"></i></span>
+      <span id="redo"><i class="fa-solid fa-arrow-right"></i></span>
     </div>
     <div class="sheild">
        <span><i class="fa-solid fa-shield"></i></span>
     </div>
     <div class="ques-mark" style="background-color: #ececf4;"><i class="fa-regular fa-circle-question"></i></div>
-   
+     <div class="form hide">
+      <label for="strokeWidth">Stroke Width</label>
+      <input type="range" id="strokeWidth" name="strokewidth" min="3" max="10" oninput="onInput(this)">
+      <label for="colorPicker">Color Picker</label>
+      <input type="color" id="colorPicker" name="strokestyle" oninput="onInput(this)">
+     </div>
     <script src="./script.js"></script>
-    <script src="./freeHandDrawing.js"></script>
+    <script src="./state.js"></script>
+    <script src="./drawing.js"></script>
+    <script src="./undoRedo.js"></script>
   </body>
 </html>

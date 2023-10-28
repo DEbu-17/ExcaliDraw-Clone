@@ -134,3 +134,19 @@ button:hover {
 ::-webkit-scrollbar{
   display: none;
 }
+.form{
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 20px whitesmoke;
+  padding: 10px;
+  height: 100px;
+  width: 160px;
+  align-items: center;
+  justify-content:space-around ;
+}
+.hide{
+  display: none;
+}

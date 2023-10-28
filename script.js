@@ -2,27 +2,27 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let previousPosition = null;
 
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-function onMouseDown(e){
-    canvas.addEventListener("mousemove",onMouseMove);
-    canvas.addEventListener("mouseup",onMouseUp)
-    previousPosition = [e.clientX, e.clientY];  
+let form = document.querySelector(".form");
+
+const formState = {
+    strokewidth:3,
+    strokestyle: "black"
 }
 
-function onMouseMove(e){
-   let currentPosition = [e.clientX, e.clientY];
-   ctx.beginPath();
-   ctx.moveTo(...previousPosition);
-   ctx.lineTo(...currentPosition);
-   ctx.strokeStyle = colorPicker.value;
-   ctx.lineWidth = 2;
-   ctx.stroke();
-   ctx.closePath();
-   previousPosition = currentPosition; 
+function drawerOnClick() {
+  form.classList.toggle("hide"); 
+}
+function onInput(element){
+    let newValue = element.value;
+    if(element.name === "strokewidth"){
+        formState[element.name] = parseInt(newValue);
+
+    }else{
+        formState[element.name] = newValue;
+    }
 }
 
-function onMouseUp(){
-    canvas.removeEventListener("mousemove",onMouseMove);
-}
